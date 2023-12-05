@@ -1,26 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,700&display=swap');
 
-*{
+* {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: whitesmoke;
+    background: #f5f5f5; /* Updated background color */
 }
 
-.gif{
-    height: 100%;
+
+.gif {
     width: 100%;
+    height: auto;
 }
 
-h2{
+h2 {
     text-align: center;
     font-size: 1.5rem;
     color: #e94d58;
@@ -35,7 +36,7 @@ h2{
     margin-top: 50px;
 }
 
-button{
+.yes-btn,.no-btn{
     position: absolute;
     width: 150px;
     height: inherit;
@@ -62,7 +63,6 @@ button:nth-child(2){
     background: white;
     color: #e94d58;
 }
-
 .credits {
     position: fixed;
     bottom: 10px;
@@ -70,4 +70,71 @@ button:nth-child(2){
     color: rgb(0, 0, 0);
     font-size: 0.9rem;
     z-index: 999; 
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    width: 80%; /* Adjusted width for better responsiveness */
+    max-width: 400px; /* Added max-width for small screens */
+    text-align: center;
+    border-radius: 10px;
+    position: relative;
+}
+
+.close {
+    color: #aaa;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#nameInput {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.submit-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background-color: #45a049;
+}
+
+/* Add this style for animation */
+.user-name.show {
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
